@@ -1,0 +1,66 @@
+import random
+
+rock = '''
+    _______
+---'   ____)
+      (_____)
+      (_____)
+      (____)
+---.__(___)
+'''
+
+paper = '''
+    _______
+---'   ____)____
+          ______)
+          _______)
+         _______)
+---.__________)
+'''
+
+scissors = '''
+    _______
+---'   ____)____
+          ______)
+       __________)
+      (____)
+---.__(___)
+'''
+com_choice=random.randint(0,2)
+choice=input("its ur turn rock paper scissors:")
+print("the computer choice is:")
+
+if choice=="rock":
+    print(rock)
+elif choice == "paper":
+    print(paper)
+else:
+    print(scissors)
+
+if com_choice==0:
+    print(rock)
+elif com_choice==1:
+    print(paper)
+else:
+    print(scissors)
+
+
+
+if choice=="rock" and com_choice==2:
+    print("you won")
+elif choice=="paper" and com_choice==0:
+    print("you won")
+elif choice=="scissor" and com_choice==1:
+    print("you won")
+elif choice=="rock" and com_choice==0 or choice=="paper" and com_choice==1 or choice=="scissor" and com_choice==3:
+    print("tie")
+else:
+    print("you lost")
+
+
+
+
+
+
+
+
